@@ -25,19 +25,73 @@ h1 {
     color:rgba(255,255,255,0.8); /* si el navegador lo entiende, lo usa */
     text-align:center;
     letter-spacing:0.1em;
-    font-weight:700;
-}
-
-h1 {
     animation: text-shadow 1.5s ease-in-out infinite;
-    font-size:5em;
-    font-weight: 900;
+    font-size: 5em;
     line-height: 1;
 }
+
+/* ANIMACION DEL TITULO
+ESTE CODIGO LO SACAMOS DE INTERNET: https://codepen.io/erinesullivan/pen/ZMreqJ */
 
 h1:hover {
     animation-play-state: paused;
 }
+
+@keyframes text-shadow {
+    0% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+
+    20% {
+        transform: translateY(-1em);
+        text-shadow:
+            0 0.125em 0 #0c2ffb,
+            0 0.25em 0 #2cfcfd,
+            0 -0.125em 0 #fb203b,
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {
+        transform: translateY(0.5em);
+        text-shadow:
+            0 -0.0625em 0 #0c2ffb,
+            0 -0.125em 0 #2cfcfd,
+            0 0.0625em 0 #fb203b,
+            0 0.125em 0 #fefc4b;
+    }
+
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow:
+            0 0.03125em 0 #0c2ffb,
+            0 0.0625em 0 #2cfcfd,
+            0 -0.03125em 0 #fb203b,
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
+
+/* FIN ANIMACION TITULO */
 
 h2{
     font-family: 'Barlow', sans-serif;
@@ -47,6 +101,7 @@ h2{
     font-weight:500;
     font-size:1.5rem;
     letter-spacing:0.1em;
+    padding-top:3rem;
 }
 
 @media screen and (max-width: 768px){
@@ -64,7 +119,7 @@ h3{
 }
 
 h5, h6{
-    font-weight:700;
+    font-weight:400;
 }
 
 a{
@@ -120,12 +175,22 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
     color:rgba(255,255,255,.9);
 }
 
-.integrante {
-    flex-basis: 100%;
+.bio {
+  font-size:15px;
+  width: 200px;
+  padding: 6rem 2rem 0.5rem 2rem;
 }
 
-.integrante:hover {
-    /*cursor:crosshair;*/
+.contacto {
+  font-size:13px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  padding: 0.2rem 2rem 0.75rem 2rem;
+}
+
+.integrante {
+    flex-basis: 100%;
+    transition:0.3s;
 }
 
 @media screen and (orientation: landscape){
@@ -142,14 +207,6 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
     font-style:normal;
 }
 
-.integrante blockquote{
-    padding: 6rem 2rem 2rem 2rem;
-}
-
-.integrante p{
-    padding: 6rem 2rem 2rem 2rem;
-}
-
 @media screen and (orientation: landscape){
     .integrante blockquote{
         padding: 6rem 2rem 2rem 2rem;
@@ -157,22 +214,8 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
     }
 }
 
-.integrante blockquote cite {
-    display:block;
-    font-style: normal;
-    font-weight: 700;
-    font-size:.8rem;
-    letter-spacing : 0.1rem;
-    padding-top:0.25rem;
-    color:rgba(255,255,255,.75);
-}
-
-.integrante blockquote cite:before {
-    content:"— ";
-}
-
 .integrante:nth-of-type(1){
-    background-color:#27d9dc;
+    background-color:#2adcdf;
     background-image:url('media/bonnefoy.png');
     background-position: bottom right;
     background-size:auto 90%;
@@ -181,7 +224,7 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
 
 
 .integrante:nth-of-type(2){
-    background:#f06970;
+    background:#ff737a;
     background-image:url('media/hip.png');
     background-position: bottom right;
     background-size:auto 90%;
@@ -198,15 +241,15 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
 
 .integrante:nth-of-type(1):hover{
     background-color:#c2185b;
-    background-image:url('media/integrante-1b.png');
+    background-image:url('media/bonnefoy2.png');
     background-position: bottom right;
     background-size:auto 90%;
     background-repeat: no-repeat;
 }
 
 .integrante:nth-of-type(2):hover{
-    background:#d32f2f;
-    background-image:url('media/integrante-2b.png');
+    background:#bf7aed;
+    background-image:url('media/hip2.png');
     background-position: bottom right;
     background-size:auto 90%;
     background-repeat: no-repeat;
@@ -214,7 +257,7 @@ en https://www.taniarascia.com/easiest-flex-grid-ever/
 
 .integrante:nth-of-type(3):hover{
     background:#ef6c00;
-    background-image:url('media/integrante-3b.png');
+    background-image:url('media/vaccaro2.png');
     background-position: bottom right;
     background-size:auto 90%;
     background-repeat: no-repeat;

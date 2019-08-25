@@ -340,11 +340,6 @@ AHORA VAMOS POR PORTAFOLIO
      margin:2% 5% 6% 5%;
 }
 
-.item:hover h4 {
-    font-weight:700i;
-    transition:0.4s ease;
-}
-
 .autor {
   font-size:0.8em;
   text-align:center;

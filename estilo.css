@@ -351,7 +351,7 @@ AHORA VAMOS POR PORTAFOLIO
   margin:0 5% 3% 5%;
 }
 
-.autor:hover {
+.item:hover .autor {
   text-decoration:none;
   background: -webkit-linear-gradient(#fefc4b, #fb203b);
   -webkit-background-clip: text;
